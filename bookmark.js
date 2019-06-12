@@ -13,15 +13,14 @@ addBookmarks.addEventListener('submit', function(e) {
     addBookmarks.querySelector('#siteName').value = "";
     addBookmarks.querySelector('#siteUrl').value = "";
 
+   
 
-
+    
 
 
     if (siteNameValue !== "" && siteUrlValue !== "") {
         document.querySelector('.output').style.display = 'block';
         // create elements 
-
-
 
         var li = document.createElement('li');
         var siteName = document.createElement('span');
@@ -73,3 +72,47 @@ list.addEventListener('click', function(e) {
         list.removeChild(lis);
     }
 });
+
+
+
+/*       
+        
+         //Working with the localStorage
+    
+    var bookmark = {
+        name : siteNameValue,
+        url : siteUrlValue
+    }
+    
+    if(localStorage.getItem('bookmarks') === null){
+        //init array
+        var bookmarks = [];
+        //add to array
+        bookmarks.push(bookmark);
+        //set to localStorage
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+       }
+    else{
+        //get bookmarks from localStorage
+        var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+        //add bookmark to array
+        bookmarks.push(bookmark);
+        //Re-set back to localStorage
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+    
+
+        //get bookmarks from localStorage
+        var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    
+        //get output id
+        var bookmarksOutput = document.querySelector('.output');
+
+        //build output
+        
+        for(var i = 0; i < bookmarks.length; i++){
+            var name =  bookmarks[i].name;
+            var url = bookmarks[i].url;
+        }
+        
+*/
